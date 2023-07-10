@@ -1,9 +1,41 @@
-ul {
-  list-style: none;
-  padding: 0;
+body {
+  background-color: #f2f2f2;
 }
 
-li {
+.todo-list {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.todo-list h1 {
+  margin-top: 0;
+}
+
+.todo-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-list__header-title {
+  font-size: 24px;
+}
+
+.todo-list__clear-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.todo-item {
   margin-bottom: 10px;
   padding: 10px;
   background-color: #f2f2f2;
@@ -12,39 +44,49 @@ li {
   align-items: center;
 }
 
-li.completed {
-  text-decoration: line-through;
-  color: gray;
+.todo-item__checkbox {
+  margin-right: 10px;
 }
 
-li .task-text {
+.todo-item__text {
   flex: 1;
   margin-left: 10px;
+  font-size: 16px;
 }
 
-li .task-actions {
+.todo-item__actions {
   display: flex;
+  align-items: center;
 }
 
-li .task-actions button {
+.todo-item__actions button {
   margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.new-task-form {
+.add-task-form {
   margin-bottom: 20px;
 }
 
-.new-task-form input {
+.add-task-form__input {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-.new-task-form button {
+.add-task-form__btn {
   margin-left: 10px;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #007bff;
   color: #fff;
   border: none;
+  cursor: pointer;
+}
+
+.drag-handle {
+  cursor: move;
+  padding: 5px;
 }
