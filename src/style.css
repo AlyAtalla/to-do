@@ -4,5 +4,47 @@ ul {
 }
 
 li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li .task-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+li .task-actions {
+  display: flex;
+}
+
+li .task-actions button {
+  margin-left: 10px;
+}
+
+.new-task-form {
+  margin-bottom: 20px;
+}
+
+.new-task-form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.new-task-form button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
 }

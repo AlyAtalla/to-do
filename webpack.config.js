@@ -20,4 +20,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'src'), // Added alias for easier import paths
+    },
+  },
 };
