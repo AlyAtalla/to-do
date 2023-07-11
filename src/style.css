@@ -90,3 +90,17 @@ body {
   cursor: move;
   padding: 5px;
 }
+
+.todo-item {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item__name {
+  flex-grow: 1;
+}
+
+.todo-item__options-btn {
+  margin-left: 10px;
+  font-size: 16px;
+}

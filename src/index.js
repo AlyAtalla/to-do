@@ -2,9 +2,9 @@ import './style.css';
 import Sortable from 'sortablejs';
 
 const tasks = [
-  { description: 'Task 1', completed: false, index: 1 },
-  { description: 'Task 2', completed: true, index: 2 },
-  { description: 'Task 3', completed: false, index: 3 }
+  { id: 1, description: 'Task 1', completed: false, index: 1 },
+  { id: 2, description: 'Task 2', completed: true, index: 2 },
+  { id: 3, description: 'Task 3', completed: false, index: 3 }
 ];
 
 const todoList = document.getElementById('todo-list');
@@ -26,29 +26,33 @@ function renderTasks() {
       renderTasks();
     });
 
-    const taskText = document.createElement('span');
-    taskText.classList.add('todo-item__text');
-    taskText.textContent = task.description;
+    const taskName = document.createElement('span');
+    taskName.classList.add('todo-item__name');
+    taskName.textContent = task.description;
 
-    const handle = document.createElement('span');
-    handle.classList.add('drag-handle');
-    handle.textContent = '☰';
+    const optionsBtn = document.createElement('button');
+    optionsBtn.classList.add('todo-item__options-btn');
+    optionsBtn.innerHTML = '&#8942;';
+    optionsBtn.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent checkbox click event from firing
+      taskName.contentEditable = true;
+      taskName.focus();
+    });
 
     listItem.appendChild(checkbox);
-    listItem.appendChild(taskText);
-    listItem.appendChild(handle);
+    listItem.appendChild(taskName);
+    listItem.appendChild(optionsBtn);
 
     todoList.appendChild(listItem);
   });
 
   const sortable = Sortable.create(todoList, {
-    handle: '.drag-handle',
+    handle: '.todo-item__options-btn',
     animation: 150,
     onEnd: (event) => {
       const movedTask = tasks[event.oldIndex];
       tasks.splice(event.oldIndex, 1);
       tasks.splice(event.newIndex, 0, movedTask);
-      renderTasks();
     },
   });
 }
