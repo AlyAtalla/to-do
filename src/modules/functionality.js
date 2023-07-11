@@ -28,7 +28,7 @@ const removeTask = (taskArray, addTask, id) => {
   addTask();
 };
 
-const deletTask = () => {
+const deleteTask = () => {
   const delIcons = document.querySelectorAll('.icon--trash');
   delIcons.forEach((delIcon) => {
     delIcon.addEventListener('mousedown', () => {
@@ -90,5 +90,5 @@ const inputEvents = (tasks, addTask, listContainer, render) => {
 };
 
 export {
-  displayTasks, inputEvents, editTasks, deletTask, removeTask,
+  displayTasks, inputEvents, editTasks, deleteTask, removeTask,
 };
