@@ -4,15 +4,15 @@ import Sortable from 'sortablejs';
 const tasks = [
   { id: 1, description: 'Task 1', completed: false, index: 1 },
   { id: 2, description: 'Task 2', completed: true, index: 2 },
-  { id: 3, description: 'Task 3', completed: false, index: 3 }
+  { id: 3, description: 'Task 3', completed: false, index: 3 },
 ];
 
 const todoList = document.getElementById('todo-list');
 
 function renderTasks() {
-  todoList.innerHTML = ''; // Clear previous tasks
+  todoList.innerHTML = '';
 
-  tasks.sort((a, b) => a.index - b.index); // Sort tasks based on index
+  tasks.sort((a, b) => a.index - b.index);
 
   tasks.forEach((task, index) => {
     const listItem = document.createElement('li');
@@ -34,7 +34,7 @@ function renderTasks() {
     optionsBtn.classList.add('todo-item__options-btn');
     optionsBtn.innerHTML = '&#8942;';
     optionsBtn.addEventListener('click', (event) => {
-      event.stopPropagation(); // Prevent checkbox click event from firing
+      event.stopPropagation();
       taskName.contentEditable = true;
       taskName.focus();
     });
