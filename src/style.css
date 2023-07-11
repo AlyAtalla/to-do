@@ -169,7 +169,7 @@ input[type='reset'] {
   min-width: 24px;
 }
 
-.icon--trash {
+.recycle-bin {
   content: url('./assets/images/icons/recycle-bin.svg');
   min-width: 24px;
 }
