@@ -2,7 +2,7 @@ import Sortable from 'sortablejs';
 import {
   displayTasks as Display,
   inputEvents as Edit,
-  deleteTask as Delete,
+  deleteTask,
 } from './functionality.js';
 import Form from './Task-Handle.js';
 
@@ -16,7 +16,7 @@ class Task {
     Form(this.addTask, this.tasksArray, this.render);
     Display(this.tasksArray, this.listContainer);
     Edit(this.tasksArray, this.addTask, this.listContainer, this.render);
-    Delete(this.tasksArray, this.addTask);
+    deleteTask(this.tasksArray, this.addTask);
 
     // Initialize Sortable
     this.initializeSortable();
