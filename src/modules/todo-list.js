@@ -1,10 +1,10 @@
-import Form from './Task-Handle.js';
+import Sortable from 'sortablejs';
 import {
   displayTasks as Display,
   inputEvents as Edit,
   deleteTask as Delete,
 } from './functionality.js';
-import Sortable from 'sortablejs';
+import Form from './Task-Handle.js';
 
 class Task {
   constructor() {
