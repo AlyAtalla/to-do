@@ -91,11 +91,6 @@ body {
   padding: 5px;
 }
 
-.todo-item {
-  display: flex;
-  align-items: center;
-}
-
 .todo-item__name {
   flex-grow: 1;
 }
