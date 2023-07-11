@@ -52,7 +52,7 @@ function renderTasks() {
     todoList.appendChild(listItem);
   });
 
-  const sortable = Sortable.create(todoList, {
+  Sortable.create(todoList, {
     handle: '.todo-item__options-btn',
     animation: 150,
     onEnd: (event) => {
