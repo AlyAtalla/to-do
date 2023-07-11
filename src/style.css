@@ -194,7 +194,7 @@ input[type='reset'] {
   color: rgb(148, 148, 148);
 }
 
-.container__header {
+.header-container {
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -205,7 +205,7 @@ input[type='reset'] {
   border-top-left-radius: 5px;
 }
 
-.container__header h1 {
+.header-container h1 {
   color: white;
   font-size: 1.7rem;
   font-weight: bold;
