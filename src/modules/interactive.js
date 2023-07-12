@@ -8,13 +8,10 @@ const toggle = (index, task) => {
 };
 
 const clearAll = (task) => {
-  task.tasksArray.forEach((data) => {
-    if (data.completed === true) {
-      task.tasksArray = task.tasksArray.filter((item) => item.index !== data.index);
-    }
-  });
-  task.tasksArray.forEach((task1, i) => {
-    task1.index = i;
+  const completedTasks = task.tasksArray.filter((data) => data.completed === true);
+  task.tasksArray = task.tasksArray.filter((item) => item.index !== completedTasks.map((data) => data.index));
+  completedTasks.forEach((task1) => {
+    task1.index = undefined;
   });
   task.addTask();
 };
