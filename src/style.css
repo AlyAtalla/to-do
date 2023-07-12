@@ -160,17 +160,17 @@ input[type='reset'] {
 }
 
 .icon--enter {
-  content: url('./assets/images/icons/Load-Arrow.png');
+  content: url('/assets/images/icons/Load-Arrow.png');
   min-width: 24px;
 }
 
 .icon--dots {
-  content: url('./assets/images/icons/vertical-dots.svg');
+  content: url('/assets/images/icons/vertical-dots.svg');
   min-width: 24px;
 }
 
 .ico-trash {
-  content: url('./assets/images/icons/ico-trash.svg');
+  content: url('/assets/images/icons/ico-trash.svg');
   min-width: 24px;
 }
 
