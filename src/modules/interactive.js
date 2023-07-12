@@ -12,9 +12,11 @@ const clearAll = (task) => {
   task.tasksArray = task.tasksArray.filter((item) => {
     return item.index !== completedTasks.map((data) => data.index);
   });
+
     completedTasks.forEach((task1) => {
     task1.index = undefined;
   });
+
   task.addTask();
 };
 
