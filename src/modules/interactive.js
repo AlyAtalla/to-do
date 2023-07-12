@@ -9,8 +9,7 @@ const toggle = (index, task) => {
 
 const clearAll = (task) => {
   const completedTasks = task.tasksArray.filter((data) => data.completed === true);
-  task.tasksArray =
-  task.tasksArray.filter((item) => item.index !== completedTasks.map((data) => data.index));
+  task.tasksArray = task.tasksArray.filter(item => item.index !== completedTasks.map(d => d.index));
   completedTasks.forEach((task1) => {
     task1.index = undefined;
   });
