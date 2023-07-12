@@ -1,68 +1,19 @@
 import './style.css';
-import Sortable from 'sortablejs';
+import Task from './modules/todo-list.js';
+import { toggle, clearAll } from './modules/interactive.js';
 
-const tasks = [
-  {
-    id: 1, description: 'Task 1', completed: false, index: 1,
-  },
-  {
-    id: 2, description: 'Task 2', completed: true, index: 2,
-  },
-  {
-    id: 3, description: 'Task 3', completed: false, index: 3,
-  },
-];
-
-const todoList = document.getElementById('todo-list');
-
-function renderTasks() {
-  todoList.innerHTML = '';
-
-  tasks.sort((a, b) => a.index - b.index);
-
-  tasks.forEach((task, index) => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('todo-item');
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = task.completed;
-    checkbox.addEventListener('change', () => {
-      tasks[index].completed = checkbox.checked;
-      renderTasks();
-    });
-
-    const taskName = document.createElement('span');
-    taskName.classList.add('todo-item__name');
-    taskName.textContent = task.description;
-
-    const optionsBtn = document.createElement('button');
-    optionsBtn.classList.add('todo-item__options-btn');
-    optionsBtn.innerHTML = '&#8942;';
-    optionsBtn.addEventListener('click', (event) => {
-      event.stopPropagation();
-      taskName.contentEditable = true;
-      taskName.focus();
-    });
-
-    listItem.appendChild(checkbox);
-    listItem.appendChild(taskName);
-    listItem.appendChild(optionsBtn);
-
-    todoList.appendChild(listItem);
-  });
-
-  Sortable.create(todoList, {
-    handle: '.todo-item__options-btn',
-    animation: 150,
-    onEnd: (event) => {
-      const movedTask = tasks[event.oldIndex];
-      tasks.splice(event.oldIndex, 1);
-      tasks.splice(event.newIndex, 0, movedTask);
-    },
-  });
-}
-
-window.addEventListener('load', renderTasks);
-
-export default renderTasks;
+const todoItemsList = document.querySelector('#list_navv');
+const clearAllBtn = document.querySelector('#clearAllBTN');
+const task = new Task();
+task.addTask();
+task.render();
+todoItemsList.addEventListener('click', (event) => {
+  if (event.target.type === 'checkbox') {
+    toggle(event.target.parentElement.getAttribute('data-key'), task);
+    task.render();
+  }
+});
+clearAllBtn.addEventListener('click', () => {
+  clearAll(task);
+  task.render();
+});
