@@ -169,8 +169,8 @@ input[type='reset'] {
   min-width: 24px;
 }
 
-.recycle-bin {
-  content: url('./assets/images/icons/recycle-bin.svg');
+.ico-trash {
+  content: url('./assets/images/icons/ico-trash.svg');
   min-width: 24px;
 }
 
