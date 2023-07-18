@@ -108,6 +108,17 @@ npx stylelint "**/*.{css,scss}"
 - Track JavaScript linter errors run:
 ```
 npx eslint .
+
+We use Jest, a popular testing framework, to ensure the correctness of our code. To run the tests, follow these steps:
+
+Open a terminal or command prompt in the project directory.
+
+To execute all the tests, run the following command:
+npm test
+
+To run specific test files or use additional options, you can use the jest command directly. For example, to run tests in a specific file:
+
+npx jest path/to/test-file.test.js
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
