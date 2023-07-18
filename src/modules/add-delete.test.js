@@ -1,10 +1,8 @@
 import {
   displayTasks,
   inputEvents,
-  editTasks,
-  deletTask,
   removeTask,
-} from './functionality';
+} from './functionality.js';
 
 // Mock localStorage for testing functions that interact with it
 const localStorageMock = (() => {
