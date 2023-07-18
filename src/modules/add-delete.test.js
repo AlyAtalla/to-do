@@ -2,7 +2,7 @@ import {
   displayTasks,
   inputEvents,
   removeTask,
-} from './src/functionality.js';
+} from '../functionality.js';
 
 const localStorageMock = (() => {
   let store = {};
