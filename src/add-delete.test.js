@@ -19,5 +19,15 @@ describe('Test Add Task and local storage', () => {
     expect(Tasks.tasksArray).toHaveLength(1);
   });
 
-
+test('Test local storage', () => {
+    JSON.parse(localStorage.getItem('todos'));
+    expect(localStorage).toHaveLength(1);
+  });
+});
+describe('Test Remove task from list', () => {
+  window.localStorage = Storage.prototype;
+  test('Remove task', () => {
+    removeTask(Tasks.tasksArray, Tasks.addTask, '0');
+    expect(Tasks.tasksArray).toHaveLength(0);
+  });
 });
