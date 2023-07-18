@@ -2,9 +2,8 @@ import {
   displayTasks,
   inputEvents,
   removeTask,
-} from './functionality.js';
+} from './src/functionality.js';
 
-// Mock localStorage for testing functions that interact with it
 const localStorageMock = (() => {
   let store = {};
 
