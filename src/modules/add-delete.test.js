@@ -2,7 +2,7 @@ import {
   displayTasks,
   inputEvents,
   removeTask,
-} from 'C:/Users/ANDALOS/Documents/GitHub/to-do-list/src/modules';
+} from 'C:/Users/ANDALOS/Documents/GitHub/to-do-list/src/modules/functionality';
 
 const localStorageMock = (() => {
   let store = {};

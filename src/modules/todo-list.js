@@ -16,7 +16,7 @@ class Task {
     Form(this.addTask, this.tasksArray, this.render);
     Display(this.tasksArray, this.listContainer);
     Edit(this.tasksArray, this.addTask, this.listContainer, this.render);
-    deleteTask(this.tasksArray, this.addTask);
+    removeTask(this.tasksArray, this.addTask);
 
     // Initialize Sortable
     this.initializeSortable();
