@@ -1,8 +1,6 @@
 import {
   displayTasks,
   inputEvents,
-  editTasks,
-  deletTask,
   removeTask,
 } from './functionality.js';
 
