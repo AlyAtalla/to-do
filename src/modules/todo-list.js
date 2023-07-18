@@ -2,7 +2,7 @@ import Sortable from 'sortablejs';
 import {
   displayTasks as Display,
   inputEvents as Edit,
-  deleteTask,
+  removeTask,
 } from './functionality.js';
 import Form from './Task-Handle.js';
 
