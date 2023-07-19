@@ -18,6 +18,7 @@ const displayTasks = (tasks, container) => {
   });
 };
 
+// Remove Task Functionality
 const removeTask = (taskArray, addTask, id) => {
   const index = parseInt(id, 10);
   taskArray.splice(index, 1);
@@ -27,7 +28,7 @@ const removeTask = (taskArray, addTask, id) => {
   addTask();
 };
 
-const deleteTask = () => {
+const deletTask = () => {
   const delIcons = document.querySelectorAll('.icon--trash');
   delIcons.forEach((delIcon) => {
     delIcon.addEventListener('mousedown', () => {
@@ -36,11 +37,13 @@ const deleteTask = () => {
   });
 };
 
+// Edit Task Functionality
 const editTasks = (newDesc, taskArray, addTask, index) => {
   taskArray[index].description = newDesc;
   addTask();
 };
 
+// Click Task Event Handler
 const inputEvents = (tasks, addTask, listContainer, render) => {
   const inputs = listContainer.querySelectorAll('input[type="text"]');
   let newDesc = '';
@@ -87,5 +90,5 @@ const inputEvents = (tasks, addTask, listContainer, render) => {
 };
 
 export {
-  displayTasks, inputEvents, editTasks, deleteTask, removeTask,
+  displayTasks, inputEvents, editTasks, deletTask, removeTask,
 };
