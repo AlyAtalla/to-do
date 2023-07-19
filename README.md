@@ -33,9 +33,9 @@
 
 **to-do-list**  is a basic website that allows users to add/remove activities to help organize schedules.
 
-![Snapshot](./images/snapshot1.jpeg)
-![Snapshot](./images/snapshot2.jpeg)
-![Snapshot](./images/snapshot3.jpeg)
+![Snapshot](/snapshot1.jpeg)
+![Snapshot](/snapshot2.jpeg)
+![Snapshot](/snapshot3.jpeg)
 
 
 ## 🛠 Built With <a name="built-with">HTML, Javascript, webpack</a>
