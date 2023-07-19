@@ -35,19 +35,7 @@ describe('Test Mark task as completed ', () => {
     toggle(task.index, Tasks);
     const newTask = Tasks.tasksArray.find((task) => task.index === 1);
     expect(newTask.completed).toBeTruthy();
-  });describe('Test Mark task as completed ', () => {
-    window.localStorage = Storage.prototype;
-    test('Edit Task Mark as completed', () => {
-      const task = {
-        index: 1,
-        description: 'This is Task 1',
-        completed: false,
-      };
-      Tasks.addTask(task);
-      toggle(task.index, Tasks);
-      const newTask = Tasks.tasksArray.find((task) => task.index === 1);
-      expect(newTask.completed).toBeTruthy();
-    });
+  });
 
   test('Test Clear All Completed Tasks', () => {
     const task2 = {
