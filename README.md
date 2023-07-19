@@ -15,6 +15,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+     - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -31,6 +32,10 @@
 # 📖 to-do-list <a name="about-project"></a>
 
 **to-do-list**  is a basic website that allows users to add/remove activities to help organize schedules.
+
+![Snapshot](./images/snapshot1.jpeg)
+![Snapshot](./images/snapshot2.jpeg)
+![Snapshot](./images/snapshot3.jpeg)
 
 
 ## 🛠 Built With <a name="built-with">HTML, Javascript, webpack</a>
@@ -51,6 +56,11 @@
 
 - **Demo of Linters**
 - **Add-and-remove-activities**
+-**live-demo**
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://alyatalla.github.io)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
